@@ -10,11 +10,9 @@ class klass {
     }
 
     assignLeader(student) {
-        return
 
-
+        this.leader = student;
     }
-
 }
 export default klass
 

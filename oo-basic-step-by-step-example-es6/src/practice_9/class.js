@@ -17,7 +17,7 @@ class klass {
     }
 
     appendMember(student) {
-        
+        return student.klass;
     }
 }
 export default klass
