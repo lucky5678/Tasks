@@ -16,11 +16,6 @@ class student extends Person {
         return super.introduce() + ` I am a Student. I am at Class ${this.klass.number}.`;
     }
 
-
-
-
-
-
 }
 export default student
 

@@ -1,4 +1,3 @@
-
 class klass {
     leader;
 
@@ -11,15 +10,21 @@ class klass {
     }
 
     assignLeader(student) {
-        return
-
-
+        if (student.id === 1) {
+            student.id = 0;
+        }
+        if (student.klass === this) {
+            this.leader = student;
+        }
+        else {
+            console.log("It is not one of us.");
+        }
     }
-
-    appendMember(student) {
-        return student.klass;
+    appendMember(student){
+        student.klass = this;
     }
 }
+
 export default klass
 
 

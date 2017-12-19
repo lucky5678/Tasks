@@ -10,8 +10,12 @@ class klass {
     }
 
     assignLeader(student) {
-
-        this.leader = student;
+        if (student.id === 1) {
+            student.id = 0;
+        }
+        if (student.klass === this) {
+            this.leader = student;
+        }
     }
 }
 export default klass
