@@ -17,7 +17,7 @@ class klass {
             this.leader = student;
         }
         if (this.teacher) {
-            console.log("I am " + this.teacher.name + ". I know " + student.name + " become Leader of Class " + this.number + ".");
+            console.log("I am "+this.teacher.name+". I know "+student.name+" become Leader of Class "+this.number+".");
         }
         else {
             console.log("It is not one of us.");
@@ -26,8 +26,9 @@ class klass {
 
     appendMember(student) {
         student.klass = this;
+
         if(this.teacher1){
-            console.log(`I am ${this.teacher.name}. I know ${student.name} has joined Class 2.`)
+            console.log("I am "+this.teacher1.name+". I know "+student.name+" has joined Class "+this.number+".");
         }
     }
 
