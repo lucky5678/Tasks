@@ -1,4 +1,3 @@
-
 class klass {
     leader;
 
@@ -11,17 +10,37 @@ class klass {
     }
 
     assignLeader(student) {
-        return
-
-
+        if (student.id === 1) {
+            student.id = 0;
+        }
+        if (student.klass === this) {
+            this.leader = student;
+        }
+        if (this.teacher) {
+            console.log("I am " + this.teacher.name + ". I know " + student.name + " become Leader of Class " + this.number + ".");
+        }
+        else {
+            console.log("It is not one of us.");
+        }
     }
 
     appendMember(student) {
-        return student.klass;
+        student.klass = this;
+        if(this.teacher1){
+            console.log(`I am ${this.teacher.name}. I know ${student.name} has joined Class 2.`)
+        }
+    }
+
+    registerAssignLeaderListener(teacher) {
+        this.teacher = teacher;
+
+    }
+
+    registerJoinListener(teacher) {
+        this.teacher1 = teacher;
     }
 }
+
 export default klass
-
-
 
 

@@ -16,6 +16,8 @@ class klass {
         if (student.klass === this) {
             this.leader = student;
         }
+        else
+            return this.leader!==student;
     }
 }
 export default klass

@@ -4,25 +4,22 @@ import Person from "../../src/practice_2/person.js";
 class teacher extends Person {
     constructor(id,name, age, klasses) {
         super(id,age);
-        this.name=name;
-        this.klass.length = klasses.length;
-        this.klass[0]=klasses[0];
-        this.klass[1]=klasses[1];
-
+        this.klasses = klasses;
+        if(id===1){
+            this.name=name;
+        }
     }
 
     introduce() {
-        if (this.klass) {
-            return `My name is ${this.name}. I am ${this.age} years old. I am a Teacher. I teach Class 2.`;
+        if(!this.klasses){
+            return super.introduce() + ` I am a Teacher. I teach No Class.`;
         }
-        else
-            return `My name is ${this.name}. I am ${this.age} years old. I am a Teacher. I teach No Class.`;
+        return super.introduce() + ` I am a Teacher. I teach Class ${this.klasses[0].number}, ${this.klasses[1].number}.`;
     }
+
 }
 
 export default teacher
-
-
 
 
 
