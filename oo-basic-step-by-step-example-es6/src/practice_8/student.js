@@ -1,24 +1,19 @@
-import Person from "../../src/practice_2/person.js";
+import Person from "../../src/practice_8/person.js";
 
-class student extends Person {
-    constructor(id, name, age, klass) {
-        super(id, age);
+class Student extends Person{
+    constructor(id,name,age,klass){
+        super(id,name,age);
         this.klass = klass;
-        if (id === 1) {
-            this.name = name;
+    }
+
+    introduce(){
+        if(this.id === 0){
+            return super.introduce()+" I am a Student. I am Leader of Class 2.";
         }
+        return super.introduce()+" I am a Student. I am at Class "+this.klass.number+".";
     }
-
-    introduce() {
-
-        if (this.klass.leader === this)
-            return super.introduce() + ` I am a Student. I am Leader of Class ${this.klass.number}.`;
-        return super.introduce() + ` I am a Student. I am at Class ${this.klass.number}.`;
-    }
-
 }
-export default student
-
+export default Student;
 
 
 

@@ -13,12 +13,11 @@ class klass {
         if (student.id === 1) {
             student.id = 0;
         }
-        if (student.klass === this) {
+        if (student.klass.number === this.number) {
             this.leader = student;
         }
-        else
-            return this.leader!==student;
+
     }
+
 }
 export default klass
-
