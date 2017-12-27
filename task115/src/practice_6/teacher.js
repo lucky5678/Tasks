@@ -2,7 +2,7 @@
 
 import Person from "../../src/practice_2/person.js";
 
-class teacher extends Person{
+class Teacher extends Person{
     constructor(name,age,klass){
         super(name,age);
         this.klass=klass;
@@ -15,4 +15,4 @@ class teacher extends Person{
             return `My name is ${this.name}. I am ${this.age} years old. I am a Teacher. I teach No Class.`;
     }
 }
-export default teacher
+export default Teacher
